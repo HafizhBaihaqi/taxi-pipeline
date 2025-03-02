@@ -1,14 +1,9 @@
 import os
 import pandas as pd
 import re
-
-# Extractor
-class Extractor:
-    def extract(self):
-        raise NotImplementedError('Subclasses must implement this method')
     
 # CSV Extractor using Pandas
-class CSVExtractor(Extractor):
+class CSVExtractor:
     def __init__(self, file_path):
         self.file_path = file_path
 
@@ -46,7 +41,7 @@ class CSVExtractor(Extractor):
             raise FileNotFoundError(f'File or directory not found: {full_path}')
 
 # JSON Extractor using Pandas
-class JSONExtractor(Extractor):
+class JSONExtractor:
     def __init__(self, file_path):
         self.file_path = file_path
 
